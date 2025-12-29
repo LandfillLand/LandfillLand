@@ -1,4 +1,4 @@
-# LandfillLand
+# [LandfillLand](https://lfl.i0c.cc)
 
 No one remembers the moment LandfillLand came into being.
 
