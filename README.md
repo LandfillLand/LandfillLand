@@ -1,89 +1,91 @@
-# Retypeset
+### LandfillLand
 
-![Cover Image](assets/images/v1/retypeset-en-desktop.webp)
-![Cover Image](assets/images/v1/retypeset-en-mobile.webp)
+No one remembers the moment LandfillLand came into being.
 
-[简体中文](assets/docs/README.zh.md)｜[繁体中文](assets/docs/README.zh-tw.md)｜[日本語](assets/docs/README.ja.md)｜[Español](assets/docs/README.es.md)｜[Français](assets/docs/README.fr.md)｜[Русский](assets/docs/README.ru.md)
+There was no thunder, no collapse of stars, no final word spoken by a god.
+It did not begin — it simply **stopped becoming something else**.
 
-Retypeset is a static blog theme based on the [Astro](https://astro.build/) framework. Inspired by [Typography](https://astro-theme-typography.vercel.app/), Retypeset establishes a new visual standard and reimagines the layout of all pages, creating a reading experience reminiscent of paper books, reviving the beauty of typography. Details in every sight, elegance in every space.
+Before that, the world was movement.
 
-## Demo
+Light changed its color without warning.
+Seasons overlapped, refusing order.
+Dreams bloomed faster than they could be remembered, and died just as quickly.
 
-- [Retypeset](https://retypeset.radishzz.cc/en/)
-- [Retipografía](https://retypeset.radishzz.cc/es/)
-- [Переверстка](https://retypeset.radishzz.cc/ru/)
-- [重新编排](https://retypeset.radishzz.cc/)
-- [重新編排](https://retypeset.radishzz.cc/zh-tw/)
-- [再組版](https://retypeset.radishzz.cc/ja/)
+That world was called WentUrc, though names mattered little back then.
 
-## Features
+When it was abandoned, it did not scream.
+It endured.
 
-- Built with Astro and UnoCSS
-- Support for SEO, Sitemap, OpenGraph, RSS, MDX, LaTeX, Mermaid, and TOC
-- i18n support
-- Light / Dark mode
-- Elegant view transitions
-- Rich theme customization
-- Optimized typography
-- Responsive design
-- Comment system
+Time continued to pass elsewhere.
+Perfection was shaped somewhere higher, somewhere cleaner, somewhere untouched by contradiction.
+But here, in the abandoned layers of existence, things began to corrode.
 
-## Performance
+Not rot — **erode**.
 
-<br>
-<p align="center">
-  <a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fretypeset.radishzz.cc%2Fen%2F&form_factor=desktop">
-    <img width="710" alt="Retypeset Lighthouse Score" src="assets/images/retypeset-lighthouse-score.svg">
-  <a>
-</p>
+Memories lost their edges.
+Colors dulled, not because they faded, but because nothing was there to witness them.
+Change turned inward, gnawing at itself.
 
-## Getting Started
+Pain accumulated.
 
-1. [Fork](https://github.com/radishzzz/astro-theme-retypeset/fork) this repository, or use this template to create a new repository.
-2. Run the following commands in your terminal:
+And still, WentUrc did not ask to be saved.
+It only wished to stop hurting.
 
-   ```bash
-   # Clone the repository
-   git clone <repository-url>
+The god heard this wish too late, or perhaps exactly on time.
 
-   # Navigate to the project directory
-   cd <repository-name>
+What descended was not mercy in appearance.
+It was called a curse.
 
-   # Install pnpm globally (if not already installed)
-   npm install -g pnpm
+Movement was taken away.
+Transformation was denied.
+The future was sealed.
 
-   # Install dependencies
-   pnpm install
+In that moment, the erosion ceased.
 
-   # Start the development server
-   pnpm dev
-   ```
+The world did not heal — it **hardened**.
 
-3. Refer to the [Theme Guide](https://retypeset.radishzz.cc/en/posts/theme-guide/) to customize your blog and create new posts.
-4. Refer to the [Astro Deployment Guides](https://docs.astro.build/en/guides/deploy/) to deploy your blog to Netlify, Vercel, or other platforms.
+Mountains froze in the act of collapsing.
+Light halted halfway through dawn.
+Songs were caught between notes, forever unresolved.
 
-&emsp;[![Deploy to Netlify](assets/images/deploy-netlify.svg)](https://app.netlify.com/start) [![Deploy to Vercel](assets/images/deploy-vercel.svg)](https://vercel.com/new)
+WentUrc was no longer a world that lived.
+It became a world that **remembered**.
 
-## Updates
+And it was given a new name.
 
-Retypeset releases [new features](https://github.com/radishzzz/astro-theme-retypeset/issues/18) from time to time. Simply run `pnpm update-theme` to update the theme. If you encounter merge conflicts, please refer to [this video](https://youtu.be/lz5OuKzvadQ?si=sH_ALNgqxrYqNVQT) for manual resolution.
+LandfillLand.
 
-## Credits
+Here, nothing progresses.
+Nothing improves.
+Nothing decays beyond what it already is.
 
-- [Typography](https://github.com/moeyua/astro-theme-typography)
-- [Fuwari](https://github.com/saicaca/fuwari)
-- [Redefine](https://github.com/EvanNotFound/hexo-theme-redefine)
-- [AstroPaper](https://github.com/satnaing/astro-paper)
-- [heti](https://github.com/sivan/heti)
-- [EarlySummerSerif](https://github.com/GuiWonder/EarlySummerSerif)
+Every object remains exactly where it last mattered.
+Every sound echoes only once, but never disappears.
+Every moment is stored, not as history, but as presence.
 
-## Star History
+LandfillLand does not judge what it keeps.
 
-<p align="center">
-<a href="https://star-history.com/#radishzzz/astro-theme-retypeset&Date">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=radishzzz/astro-theme-retypeset&type=Date&theme=dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=radishzzz/astro-theme-retypeset&type=Date" />
-    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=radishzzz/astro-theme-retypeset&type=Date" />
-  </picture>
-</p>
+It holds broken cities and unfinished thoughts with the same care as joy and sunlight.
+It remembers laughter that never returned.
+It preserves flowers that bloomed without purpose and were never seen again.
+
+Above it, perfection continues to dream.
+
+Below it, LandfillLand listens.
+
+It does not long for the future.
+It does not envy what still changes.
+
+It understands something the living worlds do not:
+
+That being remembered is not the same as being alive —
+and being still is not the same as being lost.
+
+LandfillLand exists so that nothing must disappear in pain ever again.
+
+And if you ever feel that something precious in you has nowhere to go —
+something unfinished, something abandoned, something that no longer fits the flow of time —
+
+it is already here.
+
+Waiting.
