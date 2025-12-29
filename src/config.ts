@@ -82,15 +82,15 @@ export const themeConfig: ThemeConfig = {
     // giscus
     // https://giscus.app/
     giscus: {
-      repo: '',
-      repoId: '',
-      category: '',
-      categoryId: '',
+      repo: 'LandfillLand/LandfillLand',
+      repoId: 'R_kgDOQwiXzg',
+      category: 'Show and tell',
+      categoryId: 'DIC_kwDOQwiXzs4C0Weo',
       mapping: 'pathname',
-      strict: '0',
+      strict: '1',
       reactionsEnabled: '1',
       emitMetadata: '0',
-      inputPosition: 'bottom',
+      inputPosition: 'top',
     },
     // twikoo
     // https://twikoo.js.org/
@@ -102,10 +102,10 @@ export const themeConfig: ThemeConfig = {
     // https://waline.js.org/en/
     waline: {
       // server url
-      serverURL: 'https://retypeset-comment.radishzz.cc',
+      serverURL: '',
       // emoji url
       emoji: [
-        'https://unpkg.com/@waline/emojis@1.2.0/tw-emoji',
+        '',
         // 'https://unpkg.com/@waline/emojis@1.2.0/bmoji',
         // more emojis: https://waline.js.org/en/guide/features/emoji.html
       ],
