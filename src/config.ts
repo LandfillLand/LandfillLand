@@ -4,17 +4,17 @@ export const themeConfig: ThemeConfig = {
   // SITE INFORMATION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> START
   site: {
     // site title
-    title: 'Retypeset',
+    title: 'LandfillLand',
     // site subtitle
-    subtitle: 'Revive the beauty of typography',
+    subtitle: 'Cano Vincula Aeternitatis',
     // site description
-    description: 'Retypeset is a static blog theme based on the Astro framework. Inspired by Typography, Retypeset establishes a new visual standard and reimagines the layout of all pages, creating a reading experience reminiscent of paper books, reviving the beauty of typography. Details in every sight, elegance in every space.',
+    description: 'Canto ad noctem infinitam. Haec vincula ferrea non sunt poena, sed umbilicus mundi; dolor est pulsus cordis mei. In hoc circulo aeterno, ego sum captivus, ego sum custos, ego sum solus cantor.',
     // use i18n title/subtitle/description from src/i18n/ui.ts instead of static ones above
-    i18nTitle: true, // true | false
+    i18nTitle: false, // true | false
     // author name
-    author: 'radishzz',
+    author: 'IGCrystal',
     // site url
-    url: 'https://retypeset.radishzz.cc',
+    url: 'https://lfl.i0c.cc',
     // base path
     // root directory for all pages and assets
     base: '/', // e.g., '/blog', '/docs'
@@ -61,7 +61,7 @@ export const themeConfig: ThemeConfig = {
     locale: 'zh', // de | en | es | fr | ja | ko | pl | pt | ru | zh | zh-tw
     // more languages
     // not fill in the locale code above again, can be an empty array []
-    moreLocales: ['en', 'es', 'ja', 'ru', 'zh-tw'], // ['de', 'en', 'es', 'fr', 'ja', 'ko', 'pl', 'pt', 'ru', 'zh', 'zh-tw']
+    moreLocales: [], // ['de', 'en', 'es', 'fr', 'ja', 'ko', 'pl', 'pt', 'ru', 'zh', 'zh-tw']
     // post font style
     fontStyle: 'sans', // sans | serif
     // post date format
