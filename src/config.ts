@@ -167,11 +167,11 @@ export const themeConfig: ThemeConfig = {
       },
       {
         name: 'GitHub',
-        url: 'https://github.com/radishzzz/astro-theme-retypeset',
+        url: 'https://github.com/IGCrystal',
       },
       {
         name: 'Email',
-        url: 'email@radishzz.cc',
+        url: 'IGCrystal@outlook.jp',
       },
       // {
       //   name: 'X',
