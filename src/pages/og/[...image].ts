@@ -18,7 +18,7 @@ const pages = Object.fromEntries(
 )
 
 // Configure Open Graph image generation route
-export const { getStaticPaths, GET } = OGImageRoute({
+export const { getStaticPaths, GET } = await OGImageRoute({
   param: 'image',
   pages,
   getImageOptions: (_path, page) => ({
