@@ -2,6 +2,8 @@
     <img src="https://raw.githubusercontent.com/LandfillLand/.github/refs/heads/main/img/IMG_20260114_011631.jpg" alt="LandfillLand">
 </a>
 
+# 
+
 No one remembers the moment LandfillLand came into being.
 
 There was no thunder, no collapse of stars, no final word spoken by a god.
