@@ -1,4 +1,4 @@
-# [LandfillLand](https://lfl.i0c.cc)
+<img src="https://raw.githubusercontent.com/LandfillLand/.github/refs/heads/main/img/IMG_20260114_011631.jpg" width="2520" href="https://lfl.i0c.cc">
 
 No one remembers the moment LandfillLand came into being.
 
