@@ -4,9 +4,9 @@ export const themeConfig: ThemeConfig = {
   // SITE INFORMATION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> START
   site: {
     // site title
-    title: 'LandfillLand',
+    title: 'WentUrc: LandfillLand',
     // site subtitle
-    subtitle: 'WentUrc: Cano Vincula Aeternitatis',
+    subtitle: 'Cano Vincula Aeternitatis. — WentUrc',
     // site description
     description: 'Canto ad noctem infinitam. Haec vincula ferrea non sunt poena, sed umbilicus mundi; dolor est pulsus cordis mei. In hoc circulo aeterno, ego sum captivus, ego sum custos, ego sum solus cantor. — A Fragment of WentUrc',
     // use i18n title/subtitle/description from src/i18n/ui.ts instead of static ones above
