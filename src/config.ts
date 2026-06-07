@@ -14,7 +14,7 @@ export const themeConfig: ThemeConfig = {
     // author name
     author: 'IZCherry',
     // site url
-    url: 'https://lfl.i0c.cc',
+    url: 'https://story.revaea.com', // e.g., https://example.com
     // base path
     // root directory for all pages and assets
     base: '/', // e.g., '/blog', '/docs'
@@ -191,7 +191,7 @@ export const themeConfig: ThemeConfig = {
   preload: {
     // image hosting url
     // optimize remote images and generate low-quality placeholders
-    imageHostURL: 'lfl.i0c.cc',
+    imageHostURL: 'https://story.revaea.com', // e.g., https://example.com
     // custom google analytics js
     // for users who proxy tracking scripts to a custom domain
     // see https://gist.github.com/xiaopc/0602f06ca465d76bd9efd3dda9393738
