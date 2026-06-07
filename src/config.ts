@@ -142,9 +142,9 @@ export const themeConfig: ThemeConfig = {
     // umami analytics
     // https://cloud.umami.is
     umamiAnalyticsID: 'dab0e4b9-9cbf-43c3-af60-b09d3b545c38',
-    // follow verification
-    // https://follow.is/
-    follow: {
+    // folo verification
+    // https://folo.is/
+    folo: {
       // feed ID
       feedID: '',
       // user ID
@@ -167,7 +167,7 @@ export const themeConfig: ThemeConfig = {
       },
       {
         name: 'GitHub',
-        url: 'https://github.com/IGCrystal',
+        url: 'https://github.com/IZcherry',
       },
       {
         name: 'Email',

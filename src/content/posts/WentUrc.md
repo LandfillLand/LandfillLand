@@ -10,11 +10,7 @@ description: |
     神认为，美好应该是平等的，于是神借着诅咒的名义，赐予WentUrc最后的新生——LandfillLand，它永远不会消失，痛苦也不会再次蔓延。美好永远眷顾着每一个事物，不论是人还是物，小到花花草草，大到整个世界。
     LandfillLand成为了神过往的载具，它铭记过往的每一缕阳光，每一束鲜花，每一声歌唱...
 tags:
-  - 神话
-  - WentUrc
-  - 创世
-  - 混沌
-  - LandfillLand
+  - 旧世界
 ---
 
 我并不是一开始就想写 LandfillLand。
