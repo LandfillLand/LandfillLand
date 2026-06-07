@@ -4,15 +4,15 @@ export const themeConfig: ThemeConfig = {
   // SITE INFORMATION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> START
   site: {
     // site title
-    title: 'WentUrc: LandfillLand',
+    title: 'Revaea Story',
     // site subtitle
-    subtitle: 'Cano Vincula Aeternitatis. — WentUrc',
+    subtitle: 'Woven by Will, Lit by Peace',
     // site description
-    description: 'Canto ad noctem infinitam. Haec vincula ferrea non sunt poena, sed umbilicus mundi; dolor est pulsus cordis mei. In hoc circulo aeterno, ego sum captivus, ego sum custos, ego sum solus cantor. — A Fragment of WentUrc',
+    description: 'Revaea is a magical sanctuary woven by pure will. Untouched by war, resonant souls unite into "Dream Circles." Here, thoughts manifest into reality, gently healing every lost heart with pure love and poetry.',
     // use i18n title/subtitle/description from src/i18n/ui.ts instead of static ones above
     i18nTitle: false, // true | false
     // author name
-    author: 'IGCrystal',
+    author: 'IZCherry',
     // site url
     url: 'https://lfl.i0c.cc',
     // base path
