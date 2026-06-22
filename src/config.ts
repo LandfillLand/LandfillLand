@@ -12,7 +12,7 @@ export const themeConfig: ThemeConfig = {
     // use i18n title/subtitle/description from src/i18n/ui.ts instead of static ones above
     i18nTitle: false, // true | false
     // author name
-    author: 'IZCherry',
+    author: 'Cedarflake',
     // site url
     url: 'https://story.revaea.com', // e.g., https://example.com
     // base path
@@ -171,7 +171,7 @@ export const themeConfig: ThemeConfig = {
       },
       {
         name: 'GitHub',
-        url: 'https://github.com/IZcherry',
+        url: 'https://github.com/Cedarflake',
       },
       {
         name: 'Email',
