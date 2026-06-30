@@ -24,7 +24,7 @@ const { katex: katexEnabled, reduceMotion } = themeConfig.global
 const { verification = {}, twitterID = '', googleAnalyticsID = '', umamiAnalyticsID = '', apiflashKey = '' } = themeConfig.seo ?? {}
 const { google = '', bing = '', yandex = '', baidu = '' } = verification
 const { customGoogleAnalyticsJS = '', customUmamiAnalyticsJS = '' } = themeConfig.preload ?? {}
-const iframeThemeOrigins = ['https://revaea.com', 'https://www.revaea.com']
+const { iframeThemeOrigins } = themeConfig.global
 
 // Site Metadata
 const metaTheme = defaultMode === 'dark' ? darkMode : lightMode

@@ -72,6 +72,11 @@ export const themeConfig: ThemeConfig = {
     katex: true, // true | false
     // reduce motion
     reduceMotion: false, // true | false
+    // allowed parent origins for iframe theme sync
+    iframeThemeOrigins: [
+      'https://revaea.com',
+      'https://www.revaea.com',
+    ],
   },
   // GLOBAL SETTINGS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> END
 
