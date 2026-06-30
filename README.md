@@ -1,95 +1,29 @@
 <a href="https://lfl.i0c.cc">
-    <img src="https://raw.githubusercontent.com/LandfillLand/.github/refs/heads/main/img/IMG_20260114_011631.jpg" alt="LandfillLand">
+  <img src="https://raw.githubusercontent.com/LandfillLand/.github/refs/heads/main/img/IMG_20260114_011631.jpg" alt="LandfillLand">
 </a>
 
-#
+# LandfillLand
 
-No one remembers the moment LandfillLand came into being.
+This is where I keep my stories.
 
-There was no thunder, no collapse of stars, no final word spoken by a god.
-It did not begin — it simply **stopped becoming something else**.
+I call it **LandfillLand**, not because this place is truly barren, and not because I want to throw anything away. It is the opposite, really. I just feel that some things, even after they have ended, should not be quietly cleared from the world.
 
-Before that, the world was movement.
+They might be fragments of an old world, a journey that never continued, words a character did not get to finish, or a scene that appeared one afternoon and then never showed me its door again.
 
-Light changed its color without warning.
-Seasons overlapped, refusing order.
-Dreams bloomed faster than they could be remembered, and died just as quickly.
+If I do not leave them somewhere, they will slowly begin to feel as if they never existed at all.
 
-That world was called WentUrc, though names mattered little back then.
+I do not like that very much.
 
-When it was abandoned, it did not scream.
-It endured.
+So I gather those pieces here. Some are bright, some are quiet, and some still carry a little pain that has not faded away. They are not always complete, and they do not always lead to a grand ending, but each of them once appeared earnestly.
 
-Time continued to pass elsewhere.
-Perfection was shaped somewhere higher, somewhere cleaner, somewhere untouched by contradiction.
-But here, in the abandoned layers of existence, things began to corrode.
+To me, LandfillLand feels more like a deep and silent room.
 
-Not rot — **erode**.
+I place the chapters of old worlds here, along with divine memories, shadows that have not yet reached Revaea, and dreams that could not keep moving forward. Not to prove that they are grand. Only to let them remain.
 
-Memories lost their edges.
-Colors dulled, not because they faded, but because nothing was there to witness them.
-Change turned inward, gnawing at itself.
+If you come here, you may find stories about the past, preservation, stillness, and tenderness.
 
-Pain accumulated.
+They are not manuals, and they are not essays about worldbuilding.
 
-And still, WentUrc did not ask to be saved.
-It only wished to stop hurting.
+They are only the things I write down slowly while sitting at the edge of time.
 
-The god heard this wish too late, or perhaps exactly on time.
-
-What descended was not mercy in appearance.
-It was called a curse.
-
-Movement was taken away.
-Transformation was denied.
-The future was sealed.
-
-In that moment, the erosion ceased.
-
-The world did not heal — it **hardened**.
-
-Mountains froze in the act of collapsing.
-Light halted halfway through dawn.
-Songs were caught between notes, forever unresolved.
-
-WentUrc was no longer a world that lived.
-It became a world that **remembered**.
-
-And it was given a new name.
-
-LandfillLand.
-
-Here, nothing progresses.
-Nothing improves.
-Nothing decays beyond what it already is.
-
-Every object remains exactly where it last mattered.
-Every sound echoes only once, but never disappears.
-Every moment is stored, not as history, but as presence.
-
-LandfillLand does not judge what it keeps.
-
-It holds broken cities and unfinished thoughts with the same care as joy and sunlight.
-It remembers laughter that never returned.
-It preserves flowers that bloomed without purpose and were never seen again.
-
-Above it, perfection continues to dream.
-
-Below it, LandfillLand listens.
-
-It does not long for the future.
-It does not envy what still changes.
-
-It understands something the living worlds do not:
-
-That being remembered is not the same as being alive —
-and being still is not the same as being lost.
-
-LandfillLand exists so that nothing must disappear in pain ever again.
-
-And if you ever feel that something precious in you has nowhere to go —
-something unfinished, something abandoned, something that no longer fits the flow of time —
-
-it is already here.
-
-Waiting.
+May every beam of light, every flower, and every sentence that was never spoken in time still be seen gently by someone.
