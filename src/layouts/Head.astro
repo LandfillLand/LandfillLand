@@ -39,6 +39,7 @@ const pageImage = postSlug
   : apiflashKey
     ? `https://api.apiflash.com/v1/urltoimage?access_key=${apiflashKey}&url=${Astro.url}&format=png&width=1500&height=788&ttl=259200&wait_until=network_idle&no_tracking=true`
     : `https://api.apiflash.com/v1/urltoimage?access_key=02a837b6188f4ba0a7fd9fbeff03a83e&url=https://retypeset.radishzz.cc/${lang}&format=png&width=1500&height=788&ttl=604800&wait_until=network_idle&no_tracking=true`
+const shouldUseClientRouter = !import.meta.env.DEV
 ---
 
 <head>
@@ -91,7 +92,7 @@ const pageImage = postSlug
 {baidu && <meta name="baidu-site-verification" content={baidu} />}
 
 <!-- Global View Transition -->
-<ClientRouter fallback="none" />
+{shouldUseClientRouter && <ClientRouter fallback="none" />}
 
 <!-- Theme Toggle -->
 <script
