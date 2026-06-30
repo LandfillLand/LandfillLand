@@ -1,3 +1,7 @@
+---
+lang: zh
+---
+
 ## 🌸 Revaea：心念织梦的彼岸
 
 > *Woven by Will, Lit by Peace*

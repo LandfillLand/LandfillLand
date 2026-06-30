@@ -1,8 +1,10 @@
----
+﻿---
 title: "终章：过往的载具"
-slug: "epilogue-the-vehicle-of-past"
+slug: "zh-epilogue-the-vehicle-of-past"
+abbrlink: "epilogue-the-vehicle-of-past"
 published: 2025-12-27
 draft: false
+lang: zh
 description: |
   LandfillLand 是神明的过往载具，它铭记了每一缕阳光、每一束鲜花、每一声歌唱。
   它是时间的档案馆，封存了神明最珍贵的记忆。
