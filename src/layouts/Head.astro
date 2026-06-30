@@ -24,6 +24,7 @@ const { katex: katexEnabled, reduceMotion } = themeConfig.global
 const { verification = {}, twitterID = '', googleAnalyticsID = '', umamiAnalyticsID = '', apiflashKey = '' } = themeConfig.seo ?? {}
 const { google = '', bing = '', yandex = '', baidu = '' } = verification
 const { customGoogleAnalyticsJS = '', customUmamiAnalyticsJS = '' } = themeConfig.preload ?? {}
+const iframeThemeOrigins = ['https://revaea.com', 'https://www.revaea.com']
 
 // Site Metadata
 const metaTheme = defaultMode === 'dark' ? darkMode : lightMode
@@ -102,12 +103,27 @@ const shouldUseClientRouter = !import.meta.env.DEV
     lightMode,
     darkMode,
     reduceMotion,
+    iframeThemeOrigins,
  }}
 >
 (function () {
+  let frameTheme = ''
+
+  function isTheme(value) {
+    return value === 'dark' || value === 'light'
+  }
+
+  function getAppliedTheme() {
+    return document.documentElement.classList.contains('dark') ? 'dark' : 'light'
+  }
+
   // Check if current theme is dark
-  // Priority: localStorage theme > default theme > system preference
+  // Priority: iframe theme > localStorage theme > default theme > system preference
   function isCurrentDark() {
+    if (isTheme(frameTheme)) {
+      return frameTheme === 'dark'
+    }
+
     const currentTheme = localStorage.getItem('theme')
     if (currentTheme) {
       return currentTheme === 'dark'
@@ -122,8 +138,7 @@ const shouldUseClientRouter = !import.meta.env.DEV
   }
 
   // Initialize theme
-  function initTheme(doc = document) {
-    const isDark = isCurrentDark()
+  function applyTheme(isDark, doc = document) {
     doc.documentElement.classList.toggle('dark', isDark)
 
     // Update meta theme-color tag
@@ -131,6 +146,14 @@ const shouldUseClientRouter = !import.meta.env.DEV
     if (metaThemeColor) {
       metaThemeColor.setAttribute('content', isDark ? darkMode : lightMode)
     }
+
+    if (doc === document) {
+      document.dispatchEvent(new Event('theme-changed'))
+    }
+  }
+
+  function initTheme(doc = document) {
+    applyTheme(isCurrentDark(), doc)
   }
 
   // Check and init motion preference
@@ -147,6 +170,27 @@ const shouldUseClientRouter = !import.meta.env.DEV
   document.addEventListener('astro:before-swap', ({ newDocument }) => {
     initTheme(newDocument)
     initMotionPref(newDocument)
+  })
+
+  document.addEventListener('theme-changed', () => {
+    if (!isTheme(frameTheme) || getAppliedTheme() === frameTheme) {
+      return
+    }
+
+    applyTheme(frameTheme === 'dark')
+  })
+
+  window.addEventListener('message', (event) => {
+    if (!iframeThemeOrigins.includes(event.origin)) {
+      return
+    }
+
+    if (event.data?.type !== 'set-theme' || !isTheme(event.data.theme)) {
+      return
+    }
+
+    frameTheme = event.data.theme
+    applyTheme(frameTheme === 'dark')
   })
 
   // Initialize theme on first load
