@@ -113,6 +113,15 @@ const shouldUseClientRouter = !import.meta.env.DEV
     return value === 'dark' || value === 'light'
   }
 
+  function isThemeMessage(value) {
+    return (
+      value
+      && typeof value === 'object'
+      && value.type === 'set-theme'
+      && isTheme(value.theme)
+    )
+  }
+
   function getAppliedTheme() {
     return document.documentElement.classList.contains('dark') ? 'dark' : 'light'
   }
@@ -185,7 +194,7 @@ const shouldUseClientRouter = !import.meta.env.DEV
       return
     }
 
-    if (event.data?.type !== 'set-theme' || !isTheme(event.data.theme)) {
+    if (!isThemeMessage(event.data)) {
       return
     }
 
