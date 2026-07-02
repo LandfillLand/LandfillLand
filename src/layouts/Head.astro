@@ -1,6 +1,7 @@
 ---
 import { ClientRouter } from 'astro:transitions'
 import katexCSS from 'katex/dist/katex.min.css?url'
+import ThemeController from '@/components/ThemeController.astro'
 import { allLocales, base, defaultLocale, themeConfig } from '@/config'
 import { ui } from '@/i18n/ui'
 import { getPageInfo } from '@/utils/page'
@@ -20,12 +21,10 @@ const lang = currentLang === defaultLocale ? '' : `${currentLang}/`
 // Site Configuration
 const { title, subtitle, description, i18nTitle, author, favicon } = themeConfig.site
 const { mode: defaultMode, light: { background: lightMode }, dark: { background: darkMode } } = themeConfig.color
-const { katex: katexEnabled, reduceMotion } = themeConfig.global
+const { katex: katexEnabled, reduceMotion, iframeThemeOrigins } = themeConfig.global
 const { verification = {}, twitterID = '', googleAnalyticsID = '', umamiAnalyticsID = '', apiflashKey = '' } = themeConfig.seo ?? {}
 const { google = '', bing = '', yandex = '', baidu = '' } = verification
 const { customGoogleAnalyticsJS = '', customUmamiAnalyticsJS = '' } = themeConfig.preload ?? {}
-const { iframeThemeOrigins } = themeConfig.global
-
 // Site Metadata
 const metaTheme = defaultMode === 'dark' ? darkMode : lightMode
 const siteTitle = i18nTitle ? currentUI.title : title
@@ -95,118 +94,14 @@ const shouldUseClientRouter = !import.meta.env.DEV
 <!-- Global View Transition -->
 {shouldUseClientRouter && <ClientRouter fallback="none" />}
 
-<!-- Theme Toggle -->
-<script
-  is:inline
-  define:vars={{
-    defaultMode,
-    lightMode,
-    darkMode,
-    reduceMotion,
-    iframeThemeOrigins,
- }}
->
-(function () {
-  let frameTheme = ''
-
-  function isTheme(value) {
-    return value === 'dark' || value === 'light'
-  }
-
-  function isThemeMessage(value) {
-    return (
-      value
-      && typeof value === 'object'
-      && value.type === 'set-theme'
-      && isTheme(value.theme)
-    )
-  }
-
-  function getAppliedTheme() {
-    return document.documentElement.classList.contains('dark') ? 'dark' : 'light'
-  }
-
-  // Check if current theme is dark
-  // Priority: iframe theme > localStorage theme > default theme > system preference
-  function isCurrentDark() {
-    if (isTheme(frameTheme)) {
-      return frameTheme === 'dark'
-    }
-
-    const currentTheme = localStorage.getItem('theme')
-    if (currentTheme) {
-      return currentTheme === 'dark'
-    }
-
-    if (defaultMode !== 'auto') {
-      return defaultMode === 'dark'
-    }
-
-    // If defaultMode is auto, follow system preference
-    return window.matchMedia('(prefers-color-scheme: dark)').matches
-  }
-
-  // Initialize theme
-  function applyTheme(isDark, doc = document) {
-    doc.documentElement.classList.toggle('dark', isDark)
-
-    // Update meta theme-color tag
-    const metaThemeColor = doc.head.querySelector('meta[name="theme-color"]')
-    if (metaThemeColor) {
-      metaThemeColor.setAttribute('content', isDark ? darkMode : lightMode)
-    }
-
-    if (doc === document) {
-      document.dispatchEvent(new Event('theme-changed'))
-    }
-  }
-
-  function initTheme(doc = document) {
-    applyTheme(isCurrentDark(), doc)
-  }
-
-  // Check and init motion preference
-  // Condition: theme config || system preference || browser capability
-  function initMotionPref(doc = document) {
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    const supportsViewTransitions = 'startViewTransition' in doc
-    const shouldReduceMotion = reduceMotion || prefersReducedMotion || !supportsViewTransitions
-
-    doc.documentElement.classList.toggle('reduce-motion', shouldReduceMotion)
-  }
-
-  // Update theme before page transition to prevent flashing
-  document.addEventListener('astro:before-swap', ({ newDocument }) => {
-    initTheme(newDocument)
-    initMotionPref(newDocument)
-  })
-
-  document.addEventListener('theme-changed', () => {
-    if (!isTheme(frameTheme) || getAppliedTheme() === frameTheme) {
-      return
-    }
-
-    applyTheme(frameTheme === 'dark')
-  })
-
-  window.addEventListener('message', (event) => {
-    if (!iframeThemeOrigins.includes(event.origin)) {
-      return
-    }
-
-    if (!isThemeMessage(event.data)) {
-      return
-    }
-
-    frameTheme = event.data.theme
-    applyTheme(frameTheme === 'dark')
-  })
-
-  // Initialize theme on first load
-  initTheme()
-  initMotionPref()
-})()
-</script>
+<!-- Theme Controller -->
+<ThemeController
+  defaultMode={defaultMode}
+  lightMode={lightMode}
+  darkMode={darkMode}
+  reduceMotion={reduceMotion}
+  iframeThemeOrigins={iframeThemeOrigins}
+/>
 
 <!-- Google Analytics -->
 <!-- Define gtag on window object for proper Partytown forwarding -->

@@ -1,0 +1,169 @@
+---
+interface Props {
+  defaultMode: 'light' | 'dark' | 'auto'
+  lightMode: string
+  darkMode: string
+  reduceMotion: boolean
+  iframeThemeOrigins: string[]
+}
+
+const {
+  defaultMode,
+  lightMode,
+  darkMode,
+  reduceMotion,
+  iframeThemeOrigins,
+} = Astro.props
+---
+
+<script
+  is:inline
+  define:vars={{
+    defaultMode,
+    lightMode,
+    darkMode,
+    reduceMotion,
+    iframeThemeOrigins,
+  }}
+>
+(function () {
+  let frameTheme = ''
+
+  function isFramed() {
+    try {
+      return window.self !== window.top
+    }
+    catch {
+      return true
+    }
+  }
+
+  function getTrustedEmbedOrigin() {
+    if (!isFramed()) {
+      return ''
+    }
+
+    const ancestorOrigins = window.location.ancestorOrigins
+    if (ancestorOrigins) {
+      for (const origin of ancestorOrigins) {
+        if (iframeThemeOrigins.includes(origin)) {
+          return origin
+        }
+      }
+    }
+
+    if (!document.referrer) {
+      return ''
+    }
+
+    try {
+      const referrerOrigin = new URL(document.referrer).origin
+      return iframeThemeOrigins.includes(referrerOrigin) ? referrerOrigin : ''
+    }
+    catch {
+      return ''
+    }
+  }
+
+  function markTrustedEmbed() {
+    const trustedEmbedOrigin = getTrustedEmbedOrigin()
+
+    if (!trustedEmbedOrigin) {
+      return
+    }
+
+    document.documentElement.dataset.trustedEmbedOrigin = trustedEmbedOrigin
+  }
+
+  function isTheme(value) {
+    return value === 'dark' || value === 'light'
+  }
+
+  function isThemeMessage(value) {
+    return (
+      value
+      && typeof value === 'object'
+      && value.type === 'set-theme'
+      && isTheme(value.theme)
+    )
+  }
+
+  function getAppliedTheme() {
+    return document.documentElement.classList.contains('dark') ? 'dark' : 'light'
+  }
+
+  // Priority: iframe theme > localStorage theme > default theme > system preference
+  function isCurrentDark() {
+    if (isTheme(frameTheme)) {
+      return frameTheme === 'dark'
+    }
+
+    const currentTheme = localStorage.getItem('theme')
+    if (currentTheme) {
+      return currentTheme === 'dark'
+    }
+
+    if (defaultMode !== 'auto') {
+      return defaultMode === 'dark'
+    }
+
+    return window.matchMedia('(prefers-color-scheme: dark)').matches
+  }
+
+  function applyTheme(isDark, doc = document) {
+    doc.documentElement.classList.toggle('dark', isDark)
+
+    const metaThemeColor = doc.head.querySelector('meta[name="theme-color"]')
+    if (metaThemeColor) {
+      metaThemeColor.setAttribute('content', isDark ? darkMode : lightMode)
+    }
+
+    if (doc === document) {
+      document.dispatchEvent(new Event('theme-changed'))
+    }
+  }
+
+  function initTheme(doc = document) {
+    applyTheme(isCurrentDark(), doc)
+  }
+
+  function initMotionPref(doc = document) {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const supportsViewTransitions = 'startViewTransition' in doc
+    const shouldReduceMotion = reduceMotion || prefersReducedMotion || !supportsViewTransitions
+
+    doc.documentElement.classList.toggle('reduce-motion', shouldReduceMotion)
+  }
+
+  document.addEventListener('astro:before-swap', ({ newDocument }) => {
+    initTheme(newDocument)
+    initMotionPref(newDocument)
+  })
+
+  document.addEventListener('theme-changed', () => {
+    if (!isTheme(frameTheme) || getAppliedTheme() === frameTheme) {
+      return
+    }
+
+    applyTheme(frameTheme === 'dark')
+  })
+
+  window.addEventListener('message', (event) => {
+    if (!iframeThemeOrigins.includes(event.origin)) {
+      return
+    }
+
+    if (!isThemeMessage(event.data)) {
+      return
+    }
+
+    document.documentElement.dataset.trustedEmbedOrigin = event.origin
+    frameTheme = event.data.theme
+    applyTheme(frameTheme === 'dark')
+  })
+
+  markTrustedEmbed()
+  initTheme()
+  initMotionPref()
+})()
+</script>

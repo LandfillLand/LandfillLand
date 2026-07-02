@@ -61,8 +61,18 @@ const nextUrl = supportedLangs.length > 0
   </button>
 </div>
 
+<style is:global>
+html[data-trusted-embed-origin] #theme-toggle-button {
+  display: none;
+}
+</style>
+
 <!-- Theme Toggle Script >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
 <script>
+function isTrustedEmbed() {
+  return Boolean(document.documentElement.dataset.trustedEmbedOrigin)
+}
+
 // Apply theme changes
 function applyTheme(isDark: boolean) {
   document.documentElement.classList.toggle('dark', isDark)
@@ -89,6 +99,10 @@ function toggleTheme() {
 
 // Handle theme toggle click events
 function handleThemeToggle(e: MouseEvent) {
+  if (isTrustedEmbed()) {
+    return
+  }
+
   if (!(e.target instanceof Element)) {
     return
   }
@@ -119,10 +133,16 @@ function handleThemeToggle(e: MouseEvent) {
 
 // Listen to system theme changes in real time
 function handleSystemChange(event: MediaQueryListEvent) {
+  if (isTrustedEmbed()) {
+    return
+  }
+
   const isDark = event.matches
   applyTheme(isDark)
 }
 
-document.addEventListener('click', handleThemeToggle)
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', handleSystemChange)
+if (!isTrustedEmbed()) {
+  document.addEventListener('click', handleThemeToggle)
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', handleSystemChange)
+}
 </script>
