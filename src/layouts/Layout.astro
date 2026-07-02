@@ -30,6 +30,7 @@ interface Props {
 const { postTitle, postDescription, postSlug, supportedLangs = [] } = Astro.props
 const { isPost } = getPageInfo(Astro.url.pathname)
 const fontStyle = themeConfig.global.fontStyle === 'serif' ? 'font-serif' : 'font-sans'
+const isEmbedded = Astro.url.searchParams.get('embed') === 'revaea'
 const MarginBottom = isPost && themeConfig.comment.enabled
   ? 'mb-10' // Post page with comment
   : 'mb-12' // Other pages without comment
@@ -45,7 +46,10 @@ const MarginBottom = isPost && themeConfig.comment.enabled
   <Head {postTitle} {postDescription} {postSlug} />
   <body>
     <div
-      class="site-shell mx-auto max-w-205.848 min-h-vh w-full min-h-dvh"
+      class:list={[
+        'site-shell mx-auto max-w-205.848 min-h-vh w-full min-h-dvh',
+        isEmbedded ? 'site-shell--embed' : '',
+      ]}
       p="x-[min(7.25vw,3.731rem)] y-10"
       lg="mx-[max(5.75rem,calc(50vw-34.25rem))] my-20 max-w-[min(calc(75vw-16rem),44rem)] min-h-full p-0"
     >
@@ -66,7 +70,7 @@ const MarginBottom = isPost && themeConfig.comment.enabled
 </html>
 
 <style is:global>
-html[data-trusted-embed-origin] .site-shell {
+.site-shell--embed {
   padding-top: 0;
 }
 </style>
